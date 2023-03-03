@@ -65,3 +65,4 @@ namespace DotNetMonitor.Patches
 * Display ASCII with the hex view
 * Support passing command line arguments to the loaded binary
 * Maybe do some anti-anti-debugging?
+* Generate patch codes using .NET Roslyn Compiler API automatically

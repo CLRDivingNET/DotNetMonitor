@@ -12,6 +12,7 @@ using System.IO;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using DotNetMonitor.Controls.HexBox;
+using System.Diagnostics;
 
 namespace DotNetMonitor
 {
@@ -193,6 +194,8 @@ namespace DotNetMonitor
 
         private void LoadFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string helptip = IntPtr.Size == 8 ? "input x64 .net assembly" : "input x86 .net assembly";
+            MessageBox.Show(helptip,"",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             if (OpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string file = OpenFileDialog.FileName;
